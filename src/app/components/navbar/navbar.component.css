@@ -9,7 +9,8 @@
 }
 
 .navbar-scrolled {
-    background-color: #FDD400;
+    color: yellow;
+    background-color: var(--bkg-color);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
   
