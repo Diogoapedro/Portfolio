@@ -9,16 +9,13 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   toggled: boolean = false;
-  modeToggle: HTMLInputElement | undefined;
+  darkmode: boolean = false
+
   
   ngOnInit() {
-    this.modeToggle = document.querySelector("input[type=checkbox]") as HTMLInputElement;
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     document.body.classList.toggle('dark-theme', prefersDarkScheme.matches);
-
-    if(prefersDarkScheme.matches) {
-      this.modeToggle.checked = true
-    }
+    this.darkmode = prefersDarkScheme.matches
 
     document.querySelectorAll(".nav-link").forEach(link => {
       if(window.location.href.includes(link.attributes.getNamedItem("href")?.value!)) {
@@ -29,6 +26,11 @@ export class NavbarComponent {
   
   ngAfterViewInit() {
     const navEl = document.getElementById('navbar')
+    const themeSwitch = document.getElementById('theme-switch')
+
+    window.addEventListener("click", () => {
+      this.toggleDarkTheme()
+    })
 
     window.addEventListener('scroll', () => {
       if (window.scrollY >= 80) {
@@ -42,10 +44,6 @@ export class NavbarComponent {
         }
         navEl!.classList.remove('tiny');
       }
-    });
-
-    this.modeToggle!.addEventListener('change', () => {
-      this.toggleDarkTheme()
     });
   }
 
