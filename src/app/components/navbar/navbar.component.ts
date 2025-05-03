@@ -9,13 +9,15 @@ import { Component } from '@angular/core';
 export class NavbarComponent {
 
   toggled: boolean = false;
-  darkmode: boolean = false
+  themeSwitch: HTMLElement | undefined;
 
   
   ngOnInit() {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     document.body.classList.toggle('dark-theme', prefersDarkScheme.matches);
-    this.darkmode = prefersDarkScheme.matches
+    this.themeSwitch = document.getElementById('theme-switch')!;
+    console.log(this.themeSwitch.childNodes[0])
+    prefersDarkScheme.matches ? this.themeSwitch!.classList.add('dark') : this.themeSwitch!.classList.remove('dark')
 
     document.querySelectorAll(".nav-link").forEach(link => {
       if(window.location.href.includes(link.attributes.getNamedItem("href")?.value!)) {
@@ -26,7 +28,6 @@ export class NavbarComponent {
   
   ngAfterViewInit() {
     const navEl = document.getElementById('navbar')
-    const themeSwitch = document.getElementById('theme-switch')
 
     window.addEventListener("click", () => {
       this.toggleDarkTheme()
@@ -65,7 +66,9 @@ export class NavbarComponent {
 
   toggleDarkTheme(): void {
     document.body.classList.toggle('dark-theme');
-    console.log("Color change")
+    this.themeSwitch!.classList.toggle('dark');
+    this.themeSwitch?.childNodes[0];
+    console.log("Color change");
   }
 
 }

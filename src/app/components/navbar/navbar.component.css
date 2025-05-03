@@ -94,31 +94,28 @@
 
 
 #theme-switch {
-    height: 50px;
-    width: 50px;
-    padding: 0;
+    height: fit-content;
+    padding: 5px;
     border-radius: 50%;
     background-color: var(--bkg-color);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 20px;
-    right: 20px;
 }
 
-#theme-switch svg{
+#theme-switch svg {
     fill: var(--text-color)
 }
 
-#theme-switch svg:last-child{
+
+#theme-switch svg:last-child {
     display: none;
 }
 
-.dark-theme #theme-switch svg:first-child{
+#theme-switch.dark svg:first-child {
     display: none;
 }
 
-.dark-theme #theme-switch svg:last-child{
+#theme-switch.dark svg:last-child {
     display: block;
 }
