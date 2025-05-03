@@ -7,3 +7,7 @@
   #footer {
     margin-top: auto;
   }
+
+  .nav-spacer {
+    padding-top: 126px; /* for navbar not to overlay */
+}
