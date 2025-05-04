@@ -16,7 +16,6 @@ export class NavbarComponent {
     const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
     document.body.classList.toggle('dark-theme', prefersDarkScheme.matches);
     this.themeSwitch = document.getElementById('theme-switch')!;
-    console.log(this.themeSwitch.childNodes[0])
     prefersDarkScheme.matches ? this.themeSwitch!.classList.add('dark') : this.themeSwitch!.classList.remove('dark')
 
     document.querySelectorAll(".nav-link").forEach(link => {
@@ -28,10 +27,6 @@ export class NavbarComponent {
   
   ngAfterViewInit() {
     const navEl = document.getElementById('navbar')
-
-    window.addEventListener("click", () => {
-      this.toggleDarkTheme()
-    })
 
     window.addEventListener('scroll', () => {
       if (window.scrollY >= 80) {
@@ -67,8 +62,6 @@ export class NavbarComponent {
   toggleDarkTheme(): void {
     document.body.classList.toggle('dark-theme');
     this.themeSwitch!.classList.toggle('dark');
-    this.themeSwitch?.childNodes[0];
-    console.log("Color change");
   }
 
 }

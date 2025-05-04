@@ -4,14 +4,27 @@
 }
 
 .navbar-nav>.nav-item>a {
-    font-size: large;
+    font-size: medium;
     font-weight: 600;
+    color: var(--text-color);
 }
 
 .navbar-scrolled {
     color: yellow;
     background-color: var(--bkg-color);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-scrolled>.container>.navbar-collapse>.navbar-nav>.nav-item>a {
+    color: var(--text-color);
+}
+
+.navbar-toggler {
+    border-color: var(--bkg-color);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
   
 .navbar-brand {
@@ -46,7 +59,13 @@
         left: 15%;
         right: 15%;
     }
+
+    #theme-switch{
+        margin-left: 5%;
+    }
+
 }
+
 
 .hover-underline-animation {
     color: #000;
@@ -57,9 +76,9 @@
     display: inline-block;
     padding: 15px 20px;
     position: relative;
-  }
+}
   
-  .hover-underline-animation:after {    
+.hover-underline-animation:after {    
     background: none repeat scroll 0 0 transparent;
     bottom: 10px;
     content: "";
@@ -70,12 +89,12 @@
     background: #000;
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
-  }
+}
 
-  .hover-underline-animation:hover:after {
+.hover-underline-animation:hover:after {
     width: 100%; 
     left: 0; 
-  }
+}
 
 .navbar, .navbar-brand .brand {
     transition: 400ms;
@@ -88,10 +107,6 @@
 .tiny .navbar-brand .brand {
     width: 65px;
 }
-
-
-
-
 
 #theme-switch {
     height: fit-content;
