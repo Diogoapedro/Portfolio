@@ -7,17 +7,27 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-
 body {
     --text-color: #222;
     --bkg-color: #f0f0f0;
+    --bkg-off-color: #f0f0f0;
     --btn-txt-color: white;
+    --light-accent-color: #FA7268;
     --accent-color: #e34c67;
+    --dark-accent-color: #c62368;
 }
 
 body.dark-theme {
     --text-color: #eee;
     --bkg-color: #252222;
+    --bkg-off-color: #191919;
     --btn-txt-color: rgb(46, 43, 43);
+    --light-accent-color: #FA7268;
     --accent-color: #e34c67;
+    --dark-accent-color: #c62368;
 }
 
 p, h1, h2 {
     color: var(--text-color);
+}
+
+h1, h2 {
+    font-family: "Limelight", sans-serif;
 }
