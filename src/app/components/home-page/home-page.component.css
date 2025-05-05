@@ -11,11 +11,31 @@
     .image-div {
         height: 105vh;
     }
+
+    .title-name {
+        font-weight: bold;
+        font-size:4em;
+    }
+    
+    .title-job {
+        font-weight:lighter;
+        font-size:2em;
+    }
 }
 
 @media (max-width: 992px) {
     .image-div {
         height: 100vh;
+    }
+
+    .title-name {
+        font-weight: bold;
+        font-size:2.5em;
+    }
+    
+    .title-job {
+        font-weight:lighter;
+        font-size:1.3em;
     }
 }
 
@@ -27,3 +47,8 @@
     padding-top: 126px;
     height: 70vh;
 }
+
+.title {
+    font-family: "Limelight", sans-serif;
+}
+
