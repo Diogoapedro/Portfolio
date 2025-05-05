@@ -6,7 +6,7 @@ This is my personal portfolio website built with the **Angular** framework. It s
 
 ## 🌐 Live Demo
 
-[Diogo Pedro - Porfolio](https://your-portfolio-url.com) <!-- Replace with your actual URL -->
+[Diogo Pedro - Portfolio](https://your-portfolio-url.com) <!-- Replace with your actual URL -->
 
 <br>
 
