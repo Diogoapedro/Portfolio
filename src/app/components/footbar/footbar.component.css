@@ -1,16 +1,21 @@
+.footer-container {
+    background-color: var(--bkg-off-color);
+    box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.15); /* top shadow */
+
+}
+
 #Social>a {
     border-style: none;
     margin: auto;
     width: 50%;
     width: 50px;
-    height: 40px;
 }
 
-#Facebook {
-    background-color: #3b5998;
+#gmail {
+    background:#DB4437;
 }
 
-#X-Twitter {
+#github {
     background-color: #292929;
 }
 
@@ -25,14 +30,7 @@
                 linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);;
 }
 
-#Discord {
-    background-color: #7289da;
-}
 
 #Linkedin {
     background-color: #0082ca;
-}
-
-.footer-container {
-    background-color: var(--bkg-color);
 }
