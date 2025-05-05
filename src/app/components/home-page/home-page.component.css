@@ -1,8 +1,29 @@
-.outside-div {
+.image-div {
     margin-top: -126px;
+    height: 105vh;
+    background-image: url("./layered-waves-haikei.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
 }
 
-#visual {
-    min-width: 100%;
-    min-height: 100vh;
+@media (min-width: 992px) {
+    .image-div {
+        height: 105vh;
+    }
+}
+
+@media (max-width: 992px) {
+    .image-div {
+        height: 100vh;
+    }
+}
+
+.name {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 126px;
+    height: 70vh;
 }
