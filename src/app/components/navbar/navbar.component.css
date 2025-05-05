@@ -45,7 +45,7 @@
     height: 2px;
     bottom: 10px;
     left: 0;
-    background-color: #000;
+    background-color: var(--accent-color);;
 }
 
 @media (min-width: 992px) {
@@ -68,7 +68,7 @@
 
 
 .hover-underline-animation {
-    color: #000;
+    color: var(--accent-color);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.15em;
@@ -86,7 +86,7 @@
     height: 2px;
     left: 50%; /* change to zero if you want it to apper from the side */
     position: absolute;
-    background: #000;
+    background: var(--accent-color);
     transition: width 0.3s ease 0s, left 0.3s ease 0s;
     width: 0;
 }

@@ -17,16 +17,23 @@ export class NavbarComponent {
     document.body.classList.toggle('dark-theme', prefersDarkScheme.matches);
     this.themeSwitch = document.getElementById('theme-switch')!;
     prefersDarkScheme.matches ? this.themeSwitch!.classList.add('dark') : this.themeSwitch!.classList.remove('dark')
-
-    document.querySelectorAll(".nav-link").forEach(link => {
-      if(window.location.href.includes(link.attributes.getNamedItem("href")?.value!)) {
-        link.classList.add("fixed-underline");
-      }
-    })
   }
   
   ngAfterViewInit() {
     const navEl = document.getElementById('navbar')
+    var underlined: boolean = false
+
+    document.querySelectorAll(".nav-link").forEach(link => {
+      if(window.location.href.includes(link.attributes.getNamedItem("href")?.value!)) {
+        link.classList.add("fixed-underline");
+        underlined = true
+      }
+    })
+
+    if(!underlined) {
+      document.querySelectorAll(".nav-link")[0].classList.add("fixed-underline")
+    }
+
 
     window.addEventListener('scroll', () => {
       if (window.scrollY >= 80) {
