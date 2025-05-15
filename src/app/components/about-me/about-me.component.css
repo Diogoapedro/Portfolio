@@ -1,3 +1,14 @@
+/* TITLE BAR  */
+
+.title-bar {
+    background-color: var(--dark-accent-color);
+    border-radius:0% 0% 50% 50%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    z-index: -2;
+}
+
 .title-bar {
     background-color: var(--dark-accent-color);
     border-radius:0% 0% 50% 50%;
@@ -42,13 +53,80 @@
     margin: 0px auto;
 }
 
-.container {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    height: 25em;
+
+
+/* Image-text-container */
+p > a { color: var(--text-color); }
+
+@media (min-width: 992px) { /* > lg */
+
+    .photo-container { height: 20em; }
+    p { font-size: 1.4em; }
+
 }
 
-.container>h2 {
-    text-align: center;
+@media (min-width: 768px) and (max-width: 992px) { /* md <> lg*/
+
+    .photo-container { height: 15em; }
+    p { font-size: 1.2em; }
+}
+
+@media (max-width: 768px) { /* < md */
+
+    .photo-container { height: 15em; }
+    p { font-size: 1.2em; }
+}
+
+
+.photo-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.personal-photo {
+    display: block;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.46) 6px 13px 23px -5px;
+    max-height: 100%;
+    width: auto;
+}
+
+.aboutme-text {
+    text-align: justify;
+    text-justify: inter-word;
+    >#working-technologies {
+        color: var(--light-accent-color);
+    }
+}
+
+
+
+/* Technologies-container */
+
+.tech {
+    background-color: var(--dark-accent-color);
+    display: flex;
+    flex-direction: row;
+    align-items:flex-start;
+    border-radius: 16px;
+}
+
+.card-icon {
+    display: flex;
+    justify-content: center;
+    height: 80px;
+    width: auto;
+}
+
+.card-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    > p {
+        font-size: 1em;
+        margin: 0 0 ;
+    }
 }
